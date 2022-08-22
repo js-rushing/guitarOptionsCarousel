@@ -1,5 +1,6 @@
 /*  const BODY comes from ./body.js
  *   const PICKGUARD comes from ./pickguard.js
+ *   const PICKUPS comes from ./pickups.js
  *   const bodyColors comes from ./colorScheme.js
  */
 
@@ -18,6 +19,7 @@ const resetBtn = document.querySelector('#reset')
 
 var currentBodyColorIndex = 0
 var currentPgColorIndex = 0
+var currentPickupColorIndex = 0
 
 /* INITIALIZE BODY AND PICKGUARD OPTIONS */
 changePgColor(pgColors[currentPgColorIndex].hex)
@@ -77,7 +79,7 @@ function changeBodyColor(newColorIndex) {
   if (bodyImg.innerHTML === '') {
     bodyImg.innerHTML = BODY
   }
-  
+
   const bodySVGShape1 = document.querySelector('#body-1')
   const newColor = bodyColors[newColorIndex].hex
   const bodyColorDisplay = document.querySelector('#body-color')
@@ -111,12 +113,13 @@ function changePickupColor(e) {
   const pickupImgSrc = pickupImg.src
 
   let newPickupColor
+  
+  e ? (newPickupColor = e.target.value) : (newPickupColor = 'white')
+  
+  let oldPickupColor = PICKUPS[currentPickupColorIndex]
 
-  e ? newPickupColor = e.target.value : (newPickupColor = 'white')
-
-  newPickupColor === 'white'
-    ? (oldPickupColor = 'black')
-    : (oldPickupColor = 'white')
 
   pickupImg.src = pickupImgSrc.replace(oldPickupColor, newPickupColor)
+  
+  currentPickupColorIndex = PICKUPS.indexOf(newPickupColor)
 }
