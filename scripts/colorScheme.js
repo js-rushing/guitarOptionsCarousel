@@ -43,31 +43,31 @@ const pgColors = [
         hex: '#000000',
     },
     {
-        name: 'Dark Brown',
+        name: 'Seal Brown',
         hex: '#472009',
     },
     {
-        name: 'Light Brown',
+        name: 'Saddle Brown',
         hex: '#813405',
     },
     {
-        name: 'Maroon',
+        name: 'Wine',
         hex: '#702632',
     },
     {
-        name: 'Dark Green',
+        name: 'Kombu Green',
         hex: '#243010',
     },
     {
-        name: 'Seafoam Green',
+        name: 'Viridian',
         hex: '#3c896d',
     },
     {
-        name: 'Blue Mint',
+        name: 'Aero Blue',
         hex: '#d6f9dd',
     },
     {
-        name: 'Golden Rod',
+        name: 'Maize Crayola',
         hex: '#f9c846',
     },
     {
@@ -76,26 +76,26 @@ const pgColors = [
     },
     {
         name: 'Shoreline Gold',
-        hex: '#c1b098',
+        hex: '#9e9445',
     },
     {
-        name: 'Sand',
+        name: 'Vegas Gold',
         hex: '#d6ba73',
     },
     {
-        name: 'Sunset Pink',
+        name: 'Shimmering Blush',
         hex: '#d88c9a',
     },
     {
         name: 'Fiesta Red',
-        hex: '#fe4a49',
+        hex: '#dd1923',
     },
     {
-        name: 'Forest Green',
+        name: 'Hunter Green',
         hex: '#2f4b26',
     },
     {
-        name: 'Rose Breath',
+        name: 'Thistle',
         hex: '#e9d2f4',
     },
 ]
