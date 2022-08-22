@@ -20,8 +20,8 @@ body {
 .guitar {
   width: 80vw;
   height: calc(80vw * 1.5);
-  max-width: 22rem;
-  max-height: 33rem;
+  max-width: 20rem;
+  max-height: 30rem;
   position: relative;
   margin-top: 2vh;
 }
@@ -38,8 +38,8 @@ body {
   position: absolute;
   width: 80vw;
   height: calc(80vw*1.5);
-  max-width: 22rem;
-  max-height: 33rem;
+  max-width: 20rem;
+  max-height: 30rem;
   z-index: 1;
 }
 .guitar_bridge {
@@ -49,8 +49,8 @@ body {
   position: absolute;
   width: 80vw;
   height: calc(80vw*1.5);
-  max-width: 22rem;
-  max-height: 33rem;
+  max-width: 20rem;
+  max-height: 30rem;
   z-index: 3;
 }
 .guitar_pickups {
@@ -63,7 +63,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 80vw;
-  max-width: 22rem;
+  max-width: 20rem;
   border-radius: 0.625rem;
   z-index: 10;
   padding: 1rem;
@@ -72,7 +72,7 @@ body {
 .options_form_headline {
   display: flex;
   width: 100%;
-  max-width: 22rem;
+  max-width: 20rem;
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
@@ -96,13 +96,12 @@ body {
   align-items: center;
   justify-content: center;
   width: 14rem;
-  max-width: 18.75rem;
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
   border: solid black 0.125rem;
   border-radius: 5px;
   padding: 0.25rem;
-  margin: 0 1.25rem;
+  margin: 0 0.25rem;
   box-shadow: inset 0.0625rem 0.0625rem 0.625rem rgba(45, 47, 55, 0.2), inset 0.0625rem 0.0625rem 0.625rem rgba(45, 47, 55, 0.2);
 }
 .options_form_body {
