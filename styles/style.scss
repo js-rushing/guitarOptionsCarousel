@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400&family=Kanit:wght@400;700&display=swap');
+
+$mainFont: 'Muli',
+sans-serif;
+
+$bgColor: #8898b7;
+$txtColor: #2d2f37;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #8898b7;
+    color: #2d2f37;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    font-family: $mainFont;
+}
+
+.guitar {
+    width: 400px;
+    height: 600px;
+    position: relative;
+
+    img {
+        position: absolute;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: inset 1px 1px 10px rgba(45, 47, 55, .3), inset 1px 1px 10px rgba(45, 47, 55, .3);
+    }
+
+    &_guitar {
+        z-index: 0;
+    }
+
+    &_body {
+        position: absolute;
+        width: 400px;
+        height: 600px;
+        z-index: 1;
+    }
+
+    &_bridge {
+        z-index: 2;
+    }
+
+    &_pickguard {
+        position: absolute;
+        width: 400px;
+        height: 600px;
+        z-index: 3;
+    }
+
+    &_pickups {
+        z-index: 4;
+    }
+}
+
+.options {
+    display: flex;
+
+    &_form {
+        &_headline {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 10px 0 0;
+        }
+
+        &_btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+
+            &:active {
+                transform: scale(.96);
+            }
+        }
+
+        &_color {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            overflow: hidden;
+            transition: transform .2s ease-in-out;
+            border: solid black 2px;
+            border-radius: 5px;
+            padding: .25rem;
+            margin: 0 20px;
+            box-shadow: inset 1px 1px 10px rgba(45, 47, 55, 0.2), inset 1px 1px 10px rgba(45, 47, 55, 0.2);
+        }
+
+        &_body {
+            display: flex;
+            flex-direction: column;
+
+            &_selection {
+                display: flex;
+            }
+        }
+
+        &_pickguard {
+            display: flex;
+            flex-direction: column;
+
+            &_selection {
+                display: flex;
+            }
+        }
+
+        &_pickups {
+            margin: 10px 0 0;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            box-shadow: inset 1px 1px 10px rgba(45, 47, 55, 0.05), inset 1px 1px 10px rgba(45, 47, 55, 0.05);
+            border-radius: 5px;
+            border: none;
+
+            legend {
+                font-size: 1.25rem;
+            }
+
+            input[type=radio] {
+                transform: scale(1.5);
+                cursor: pointer;
+            }
+        }
+
+        &_reset {
+            background-color: $txtColor;
+            color: $bgColor;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            margin: 10px 0 0;
+            padding: 20px;
+            box-shadow: inset 1px 1px 10px rgba(136, 152, 183, 0.2), inset 1px 1px 10px rgba(136, 152, 183, 0.2);
+            border-radius: 5px;
+
+            cursor: pointer;
+            font-size: 1.5rem;
+
+            &:active {
+                transform: scale(.98);
+            }
+        }
+    }
+}

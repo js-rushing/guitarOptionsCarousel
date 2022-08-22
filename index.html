@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/dist/style.css" />
+    <title>Guitar Options Carousel</title>
+  </head>
+  <body>
+    <div class="guitar">
+      <img
+        src="./images/yamahaPacifica-guitar.png"
+        alt=""
+        class="guitar_whole"
+        id="whole"
+      />
+      <div class="svg_container" id="body"></div>
+      <img
+        src="./images/yamahaPacifica-bridge.png"
+        alt=""
+        class="guitar_bridge"
+        id="bridge"
+      />
+      <div class="svg_container" id="pickguard"></div>
+      <!-- <img
+        src="./images/yamahaPacifica-pickguard.svg"
+        alt=""
+        class="guitar_pickguard"
+        id="pickguard"
+      /> -->
+      <img
+        src="./images/yamahaPacifica-pickups-white.png"
+        alt=""
+        class="guitar_pickups"
+        id="pickups"
+      />
+    </div>
+    <div class="options">
+      <form class="options_form">
+        <div class="options_form_body">
+          <div class="options_form_headline">Body Color</div>
+          <div class="options_form_body_selection">
+            <div class="options_form_btn" id="body-prev">
+              <i class="fas fa-arrow-alt-circle-left"></i>
+            </div>
+            <div class="options_form_color" id="body-color">
+            </div>
+            <div class="options_form_btn" id="body-next">
+              <i class="fas fa-arrow-alt-circle-right"></i>
+            </div>
+          </div>
+        </div>
+        <div class="options_form_pickguard">
+          <div class="options_form_headline">Pickguard Color</div>
+          <div class="options_form_pickguard_selection">
+            <div class="options_form_btn" id="pg-prev">
+              <i class="fas fa-arrow-alt-circle-left"></i>
+            </div>
+            <div class="options_form_color" id="pg-color">
+            </div>
+            <div class="options_form_btn" id="pg-next">
+              <i class="fas fa-arrow-alt-circle-right"></i>
+            </div>
+          </div>
+        </div>
+        <fieldset class="options_form_pickups">
+          <legend class="options_form_headline">Pickup Color</legend>
+          <div class="options_form_pickups_input">
+            <input
+              type="radio"
+              name="pickup-selector"
+              id="white"
+              class="options_form_pickups_input-input"
+              value="white"
+              checked
+            />
+            <label for="white" class="options_form_pickups_input-label"
+              >White</label
+            >
+          </div>
+          <div class="options_form_pickups_input">
+            <input
+              type="radio"
+              name="pickup-selector"
+              id="black"
+              class="options_form_pickups_input-input"
+              value="black"
+            />
+            <label for="black" class="options_form_pickups_input-label"
+              >Black</label
+            >
+          </div>
+        </fieldset>
+        <div class="options_form_reset" id="reset">Reset Options</div>
+      </form>
+    </div>
+
+    <script src="./scripts/colorScheme.js"></script>
+    <script src="./scripts/body.js"></script>
+    <script src="./scripts/pickguard.js"></script>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
