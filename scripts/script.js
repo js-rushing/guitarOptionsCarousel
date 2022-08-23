@@ -91,13 +91,14 @@ function changeBodyColor(newColorIndex) {
 }
 
 function changePgColor(fill, stroke) {
+  const pgColorDisplay = document.querySelector('#pg-color')
+
   if (fill[0] === '-') {
     pgImg.innerHTML = `
       <img src="./images/yamahaPacifica-pickguard${fill}" class="guitar_pickguard">
     `
   } else {
     pgImg.innerHTML = PICKGUARD
-    const pgColorDisplay = document.querySelector('#pg-color')
     const pgSVGShape1 = document.querySelector('#pg-1')
     pgSVGShape1.style.fill = fill
     pgSVGShape1.style.stroke = stroke
@@ -105,9 +106,9 @@ function changePgColor(fill, stroke) {
     if (!stroke) {
       stroke = fill
     }
-
-    pgColorDisplay.innerText = pgColors[currentPgColorIndex].name
   }
+
+  pgColorDisplay.innerText = pgColors[currentPgColorIndex].name
 }
 
 function changePickupColor(e) {
