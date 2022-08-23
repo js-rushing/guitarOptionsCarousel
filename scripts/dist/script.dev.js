@@ -89,8 +89,15 @@ function changePgColor(fill, stroke) {
   }
 
   pgColorDisplay.innerText = pgColors[currentPgColorIndex].name;
-  pgSVGShape1.style.fill = fill;
-  pgSVGShape1.style.stroke = stroke;
+
+  if (fill === '#724341') {
+    pgImg.innerHTML = "\n      <img src=\"./images/yamahaPacifica-pickguard-brown-shell.png\" class=\"guitar_pickguard\">\n    ";
+  } else if (fill === '#5533b9') {
+    pgImg.innerHTML = "\n      <img src=\"./images/yamahaPacifica-pickguard-yeezy.png\" class=\"guitar_pickguard\">\n    ";
+  } else {
+    pgSVGShape1.style.fill = fill;
+    pgSVGShape1.style.stroke = stroke;
+  }
 }
 
 function changePickupColor(e) {

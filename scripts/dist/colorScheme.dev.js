@@ -73,4 +73,10 @@ var pgColors = [{
 }, {
   name: 'Thistle',
   hex: '#e9d2f4'
+}, {
+  name: 'Tortoise Shell',
+  hex: '#724341'
+}, {
+  name: 'Yeezy',
+  hex: '#5533b9'
 }];
