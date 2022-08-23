@@ -91,30 +91,22 @@ function changeBodyColor(newColorIndex) {
 }
 
 function changePgColor(fill, stroke) {
-  if (pgImg.innerHTML === '') {
-    pgImg.innerHTML = PICKGUARD
-  }
-
-  const pgColorDisplay = document.querySelector('#pg-color')
-  const pgSVGShape1 = document.querySelector('#pg-1')
-
-  if (!stroke) {
-    stroke = fill
-  }
-
-  pgColorDisplay.innerText = pgColors[currentPgColorIndex].name
-
-  if (fill === '#724341') {
+  if (fill[0] === '-') {
     pgImg.innerHTML = `
-      <img src="./images/yamahaPacifica-pickguard-brown-shell.png" class="guitar_pickguard">
-    `
-  } else if (fill === '#5533b9') {
-    pgImg.innerHTML = `
-      <img src="./images/yamahaPacifica-pickguard-yeezy.png" class="guitar_pickguard">
+      <img src="./images/yamahaPacifica-pickguard${fill}" class="guitar_pickguard">
     `
   } else {
+    pgImg.innerHTML = PICKGUARD
+    const pgColorDisplay = document.querySelector('#pg-color')
+    const pgSVGShape1 = document.querySelector('#pg-1')
     pgSVGShape1.style.fill = fill
     pgSVGShape1.style.stroke = stroke
+
+    if (!stroke) {
+      stroke = fill
+    }
+
+    pgColorDisplay.innerText = pgColors[currentPgColorIndex].name
   }
 }
 

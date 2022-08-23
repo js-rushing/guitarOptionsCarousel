@@ -100,10 +100,10 @@ const pgColors = [
   },
   {
     name: 'Tortoise Shell',
-    hex: '#724341',
+    hex: '-brown-shell.png',
   },
   {
     name: 'Yeezy',
-    hex: '#5533b9',
+    hex: '-yeezy.png',
   },
 ]
